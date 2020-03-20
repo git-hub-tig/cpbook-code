@@ -6,6 +6,7 @@ int main() {
   int sum = 0, ans = 0;
   for (int i = 0; i < n; ++i) {                  // linear scan, O(n)
     sum += A[i];                                 // greedily extend this
+// wqs ans update when grow, keep when not. return keep value.
     ans = max(ans, sum);                         // keep the cur max RSQ
     if (sum < 0) sum = 0;                        // reset the running sum
   }                                              // if it ever dips below 0
